@@ -33,3 +33,8 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+#
+README.dev.md
+ios
+.eslintrc

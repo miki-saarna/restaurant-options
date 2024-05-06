@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "meals-to-go",
-    "slug": "meals-to-go",
+    "name": "restaurant-options",
+    "slug": "restaurant-options",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -11,11 +11,10 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.restaurant-options"
     },
     "android": {
       "adaptiveIcon": {
