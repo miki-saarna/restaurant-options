@@ -18,7 +18,7 @@ const SearchbarEl = styled(Searchbar)`
 `;
 
 const RestaurantListContainer = styled.View`
-  flexgrow: 1;
+  flex-grow: 1;
   padding: 16px;
 `;
 
