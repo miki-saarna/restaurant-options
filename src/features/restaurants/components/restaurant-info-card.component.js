@@ -6,13 +6,13 @@ import styled from "styled-components/native";
 const RestaurantCard = styled(Card)``;
 
 const RestaurantCover = styled(Card.Cover)`
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-bottom-left-radius: ${(props) => props.theme.space[0]};
+  border-bottom-right-radius: ${(props) => props.theme.space[0]};
 `;
 
 const Title = styled.Text`
-  padding: 16px;
-  color: red;
+  padding: ${(props) => props.theme.space[3]};
+  color: ${(props) => props.theme.colors.text.primary};
 `;
 
 export default function RestaurantInfoCard({ restaurant = {} }) {

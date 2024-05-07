@@ -10,16 +10,16 @@ const SafeArea = styled(SafeAreaView)`
 `;
 
 const SearchContainer = styled.View`
-  padding: 16px;
+  padding: ${(props) => props.theme.space[3]};
 `;
 
 const SearchbarEl = styled(Searchbar)`
-  border-radius: 8px;
+  border-radius: ${(props) => props.theme.space[2]};
 `;
 
 const RestaurantListContainer = styled.View`
   flex-grow: 1;
-  padding: 16px;
+  padding: ${(props) => props.theme.space[3]};
 `;
 
 export default function RestaurantsScreen() {
