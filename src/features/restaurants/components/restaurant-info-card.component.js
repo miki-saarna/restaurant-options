@@ -2,6 +2,9 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { Card } from "react-native-paper";
 import styled from "styled-components/native";
+import { SvgXml } from "react-native-svg";
+import star from "../../../../assets/star";
+import open from "../../../../assets/open";
 
 const RestaurantCard = styled(Card)``;
 
@@ -11,8 +14,30 @@ const RestaurantCover = styled(Card.Cover)`
 `;
 
 const Title = styled.Text`
-  padding: ${(props) => props.theme.space[3]};
+  font-family: ${(props) => props.theme.fonts.heading};
+  font-size: ${(props) => props.theme.fontSizes.body};
   color: ${(props) => props.theme.colors.text.primary};
+`;
+
+const Address = styled.Text`
+  font-family: ${(props) => props.theme.fonts.body};
+  font-size: ${(props) => props.theme.fontSizes.caption};
+`;
+
+const Info = styled.View`
+  padding: ${(props) => props.theme.space[3]};
+`;
+
+const Rating = styled.View`
+  flex-direction: row;
+  padding-top: ${(props) => props.theme.space[2]};
+  padding-bottom: ${(props) => props.theme.space[2]};
+`;
+
+const Section = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export default function RestaurantInfoCard({ restaurant = {} }) {
@@ -28,10 +53,25 @@ export default function RestaurantInfoCard({ restaurant = {} }) {
     isClosedTemporarily,
   } = restaurant;
 
+  const RatingArray = () => {
+    return [...Array(Math.ceil(rating))].map((_, i) => {
+      return <SvgXml xml={star} height={20} width={20} />;
+    });
+  };
+
   return (
     <RestaurantCard elevation={5}>
       <RestaurantCover key={name} source={{ uri: photos[0] }} />
-      <Title>{name}</Title>
+      <Info>
+        <Title>{name}</Title>
+        <Section>
+          <Rating>
+            <RatingArray />
+          </Rating>
+          {isOpenNow && <SvgXml xml={open} height={20} width={20} />}
+        </Section>
+        <Address>{address}</Address>
+      </Info>
     </RestaurantCard>
   );
 }
