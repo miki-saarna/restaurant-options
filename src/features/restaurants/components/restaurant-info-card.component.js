@@ -1,10 +1,11 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 import { Card } from "react-native-paper";
 import styled from "styled-components/native";
 import { SvgXml } from "react-native-svg";
 import star from "../../../../assets/star";
 import open from "../../../../assets/open";
+import { Spacer } from "../../../components/spacer/spacer.component";
 
 const RestaurantCard = styled(Card)``;
 
@@ -68,7 +69,17 @@ export default function RestaurantInfoCard({ restaurant = {} }) {
           <Rating>
             <RatingArray />
           </Rating>
-          {isOpenNow && <SvgXml xml={open} height={20} width={20} />}
+          {isClosedTemporarily && (
+            <Text variant="label" style={{ color: "red" }}>
+              CLOSED TEMPORARILY
+            </Text>
+          )}
+          <Spacer position="left" size="large">
+            {isOpenNow && <SvgXml xml={open} height={20} width={20} />}
+          </Spacer>
+          <Spacer poisition="left" size="large">
+            <Image style={{ width: 15, height: 15 }} source={{ uri: icon }} />
+          </Spacer>
         </Section>
         <Address>{address}</Address>
       </Info>
