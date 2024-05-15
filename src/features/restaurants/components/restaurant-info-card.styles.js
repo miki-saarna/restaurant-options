@@ -1,7 +1,9 @@
 import styled from "styled-components/native";
 import { Card } from "react-native-paper";
 
-export const RestaurantCard = styled(Card)``;
+export const RestaurantCard = styled(Card)`
+  margin-bottom: ${(props) => props.theme.space[3]};
+`;
 
 export const RestaurantCover = styled(Card.Cover)`
   border-bottom-left-radius: ${(props) => props.theme.space[0]};
