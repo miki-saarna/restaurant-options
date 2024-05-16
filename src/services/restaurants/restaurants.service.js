@@ -21,7 +21,7 @@ export const restaurantsRequest = (location = "43.653225,-79.383186") => {
 
 export const transformRestaurants = ({ results = [] }) => {
   const mappedResults = results.map((restaurant) => {
-    restaurant.photos = restaurant.photos.map((p) => {
+    restaurant.photos = restaurant.photos.map((_) => {
       return mockImages[Math.ceil(Math.random() * (mockImages.length - 1))];
     });
 
