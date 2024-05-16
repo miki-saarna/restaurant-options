@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "restaurant-options",
-    "slug": "restaurant-options",
+    "slug": "restaurant-takeout-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -29,6 +29,12 @@
     },
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "e99e35c2-9908-430f-892c-fdd35a23bdff"
+      }
+    },
+    "owner": "seonggook13"
   }
 }
