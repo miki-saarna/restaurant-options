@@ -24,6 +24,10 @@ On the lefthand side, there should be options to select the device to view the m
 
 Note: on Android and iOS, it may take time for the app to load. If it continues to struggle to load, try clicking the refresh icon below the mobile device simulator.
 
+If the above instructions do not properly launch the app, try following the instructional video below:
+
+[![Video instructions for launching mobile app in Expo](https://img.youtube.com/vi/aYq_HxbvPGM/0.jpg)](https://www.youtube.com/watch?v=aYq_HxbvPGM)
+
 ## Description
 
 This is a mobile app developed to demonstrate my ability to create useful and user-friendly mobile applications that are available on iOS and Android devices with React Native.
