@@ -17,6 +17,7 @@ import {
 
 export default function RestaurantInfoCard({ restaurant = {} }) {
   const {
+    placeId,
     name = "Some Restaurant",
     icon = "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
     photos = [
@@ -30,7 +31,14 @@ export default function RestaurantInfoCard({ restaurant = {} }) {
 
   const RatingArray = () => {
     return [...Array(Math.ceil(rating))].map((_, i) => {
-      return <SvgXml xml={star} height={20} width={20} />;
+      return (
+        <SvgXml
+          key={`star-${placeId}-${i}`}
+          xml={star}
+          height={20}
+          width={20}
+        />
+      );
     });
   };
 
