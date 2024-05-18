@@ -35,6 +35,12 @@ This is a mobile app developed to demonstrate my ability to create useful and us
 Current features include:
 
 - Restaurants page displaying various local restaurants
+- Restaurant search bar
+  - Searches currently only available for the following cities:
+    - Antwerp
+    - Chicago
+    - San Francisco
+    - Toronto
 - Bottom-pinned navigation menu
 - iOS and Android support
 
